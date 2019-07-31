@@ -1,11 +1,11 @@
 <?php
-if(isset($_GET['submit'])) {
-	$sender=$_GET['name'];
-    $subject=$_GET['subject'];
-    $senderEmail=$_GET['email'];
-    $message=$_GET['message'];
+if(isset($_POST['submit'])) {
+    $sender=$_POST['name'];
+    $subject=$_POST['subject'];
+    $senderEmail=$_POST['email'];
+    $message=$_POST['message'];
 	
-	$recipient="dealgame.contact@gmail.com";
+    $recipient="dealgame.contact@gmail.com";
     $mailBody="Name: $sender\nEmail Address: $senderEmail\n\nMessage: $message";
 	
     mail($recipient, $subject, $mailBody);
